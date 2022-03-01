@@ -1,0 +1,33 @@
+@import '../../styles/global.scss';
+nav {
+    ul {
+        padding: 20px 0 0;
+        margin: 0;
+        list-style: none;
+        li {
+            margin-bottom: 10px;
+            a {
+                color: #fff;
+                display: inline-block;
+                padding: 0 10px;
+                border-radius: 15px;
+                line-height: 28px;
+                white-space: nowrap;
+                border: 1px solid transparent;
+                display: block;
+                i {
+                    width: 25px;
+                }
+            }
+            a:not(.active):hover {
+                background-color: $color-primary-hover;
+                color: #fff;
+            }
+            a.active {
+                border: 1px solid rgba(255, 255, 255, .5);
+                color: #fff;
+                pointer-events: none;
+            }
+        }
+    }
+}

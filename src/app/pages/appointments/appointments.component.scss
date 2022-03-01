@@ -1,0 +1,193 @@
+@import '../../styles/global.scss';
+section {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    div.message-tools {
+        padding: 20px;
+        display: flex;
+        div.search {
+            line-height: 30px;
+            background: rgba(0, 0, 0, 0.2);
+            height: 30px;
+            border-radius: 40px;
+            i.fa-caret-left,
+            i.fa-caret-right {
+                padding: 5px 10px;
+            }
+            span {
+                margin: 0 5px;
+            }
+        }
+        input.search::placeholder {
+            color: #666;
+        }
+        div.message-actions {
+            flex: 1;
+            text-align: right;
+            a {
+                margin-left: 10px;
+                i {
+                    color: $color-font-global;
+                    padding: 5px;
+                }
+            }
+            a:hover {
+                i {
+                    color: rgba(255, 255, 255, 0.8);
+                }
+            }
+        }
+    }
+    div.messages {
+        overflow-y: auto;
+        height: calc(100% - 40px);
+        display: flex;
+        flex-direction: column;
+        div.message-summaries {
+            flex: 1;
+            min-width: 200px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+            div.message-summary {
+                border: 1px solid rgba(255, 255, 255, 0);
+                height: 60px;
+                border-radius: 10px;
+                margin-bottom: 10px;
+                cursor: pointer;
+                div.message-subject,
+                div.message-snippet {
+                    overflow: hidden;
+                    height: 20px;
+                    p {
+                        margin: 0;
+                    }
+                }
+                div.message-subject {
+                    padding: 10px 10px 0;
+                    overflow: hidden;
+                    display: flex;
+                    p {
+                        line-height: 20px;
+                        flex: 1;
+                    }
+                    p:first-child {
+                        font-weight: bold;
+                    }
+                    p:last-child {
+                        text-align: right;
+                        font-size: 12px;
+                        i {
+                            color: red;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+                div.message-snippet {
+                    padding: 0 10px 10px;
+                    overflow: hidden;
+                    p {
+                        line-height: 24px;
+                        font-size: 12px;
+                    }
+                }
+            }
+            div.message-summary:not(.active):hover {
+                background: rgba(0, 0, 0, 0.2);
+            }
+            div.message-summary.active {
+                border: 1px solid rgba(255, 255, 255, .2);
+                cursor: default;
+                div.message-subject {
+                    p {
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+        div.message-documents {
+            flex: 1;
+            padding: 10px 20px 20px;
+            border-bottom-right-radius: 10px;
+            overflow-y: auto;
+            background: rgba(0, 0, 0, 0.1);
+            div.message-document {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                display: flex;
+                padding: 10px 0;
+                div.message-times {
+                    min-width: 50px;
+                    span {
+                        margin: 0;
+                    }
+                }
+                div.message-content {
+                    flex: 1;
+                    max-width: 150px;
+                    p {
+                        margin: 0;
+                    }
+                }
+                div.message-job {
+                    flex: 1;
+                    p {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 1;
+    table-layout: fixed;
+    width: 100%;
+}
+
+td {
+    padding: 0;
+}
+
+.day {
+    font-size: 8em;
+    font-weight: 900;
+    line-height: 1em;
+}
+
+.month {
+    font-size: 4em;
+    line-height: 1em;
+    text-transform: lowercase;
+}
+
+.calendar thead {
+    color: $color-primary;
+    text-transform: uppercase;
+}
+
+.calendar td {
+    padding: .5em 1em;
+    text-align: center;
+}
+
+.calendar tbody td {
+    cursor: pointer;
+}
+
+.calendar tbody td:hover {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+}
+
+.current-day {
+    color: $color-primary;
+    font-weight: 600;
+}
+
+.prev-month,
+.next-month {
+    color: #666;
+}

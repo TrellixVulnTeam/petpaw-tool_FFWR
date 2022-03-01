@@ -1,0 +1,17 @@
+// SCSS
+button,
+.button {
+    background-color: $color-primary;
+    border: none;
+    height: 30px;
+    padding: 0 12px;
+    border-radius: 20px;
+    font: $font-global;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover,
+.button:hover {
+    background-color: $color-primary-hover;
+}

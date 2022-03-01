@@ -1,0 +1,10 @@
+@import '../../styles/global.scss';
+div.header {
+    div.logo {
+        svg {
+            padding: 10px 10px 0;
+            width: 120px !important;
+            height: auto;
+        }
+    }
+}

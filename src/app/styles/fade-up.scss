@@ -1,0 +1,21 @@
+.fade-up {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    opacity: 0;
+}
+
+.fade-up-animation {
+    opacity: 0;
+    animation-name: fade-up;
+    animation-delay: .2s;
+}
+
+@keyframes fade-up {
+    from {
+        transform: translate3d(0, 60px, 0)
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}

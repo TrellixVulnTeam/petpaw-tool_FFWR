@@ -1,0 +1,68 @@
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+// Variables
+$font-global: 300 14px/24px 'Roboto',
+sans-serif;
+$font-header: 1em/1.5em 'Outfit',
+sans-serif;
+$font-header-h4: 18px;
+$font-header-h3: 24px;
+$font-header-h2: 36px;
+$font-header-h1: 48px;
+// SCSS
+:host,
+html,
+body {
+    font: $font-global;
+    color: $color-font-global;
+}
+
+h1,
+h2,
+h3 {
+    margin-top: 0;
+    font: $font-header;
+    line-height: 1.2em;
+    color: $color-primary;
+}
+
+h1 {
+    font-size: $font-header-h1;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: $font-header-h2;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: $font-header-h3;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: $font-header-h4;
+    font-weight: 600;
+}
+
+p {
+    margin-top: 0;
+    line-height: 1.5em;
+}
+
+a,
+a:visited,
+a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgba(255, 255, 255, 0.8);
+    ;
+}
+
+ul {
+    margin-top: 0;
+}

@@ -1,0 +1,13 @@
+@import '../../styles/global.scss';
+section {
+    background: linear-gradient(0deg, #077 0, #008282 100%);
+    height: calc(100% - 40px);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 60%);
+    svg {
+        padding: 10px 10px 0;
+        width: 120px !important;
+        height: auto;
+    }
+}
