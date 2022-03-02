@@ -7,7 +7,6 @@ import { PrescriptionsComponent } from './pages/prescriptions/prescriptions.comp
 import { MessagesComponent } from './pages/messages/messages.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
-
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'appointments', component: AppointmentsComponent },
@@ -15,6 +14,7 @@ const routes: Routes = [
   { path: 'messages', component: MessagesComponent },
   { path: 'navbar', component: NavbarComponent },
   { path: '**', pathMatch: 'full', component: PagenotfoundComponent }];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
