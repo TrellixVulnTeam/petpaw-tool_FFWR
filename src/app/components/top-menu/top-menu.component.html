@@ -1,22 +1,22 @@
 <nav>
     <ul id="nav-items">
-        <li class="notifications">
-            <a aria-label="Notifictions" title="Notifications">
+        <li id="notifications" class="notifications">
+            <a aria-label="Notifictions" title="Notifications" onclick="bellFunction()">
                 <i class="fa fa-bell" aria-hidden="true"></i>
                 <div class="alert"></div>
             </a>
-            <div class="notifications-dropdown">
+            <div id="nav-items-notifications" class="notifications-dropdown">
                 <ul>
-                    <li routerLink="/messages">1 new message received</li>
+                    <li routerLink="/messages"><i class="fa fa-envelope"></i>1 new message received</li>
                 </ul>
             </div>
         </li>
-        <li class="user">
-            <a aria-label="User" title="User">
+        <li id="user" class="user">
+            <a aria-label="User" title="User" onclick="navFunction()">
                 Mary Johnson
                 <i class="fa fa-caret-down" aria-hidden="true"></i>
             </a>
-            <div class="user-dropdown">
+            <div id="nav-items-sub" class="user-dropdown">
                 <ul>
                     <li>Settings</li>
                     <li>Logout</li>

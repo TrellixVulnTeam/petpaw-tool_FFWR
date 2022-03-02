@@ -28,6 +28,7 @@ section {
                 i {
                     color: $color-font-global;
                     padding: 5px;
+                    cursor: pointer;
                 }
             }
             a:hover {
@@ -47,11 +48,10 @@ section {
             padding: 20px;
             background: rgba(0, 0, 0, 0.2);
             border-bottom-left-radius: 10px;
+            overflow-y: auto;
             div.message-summary {
-                border: 1px solid rgba(255, 255, 255, 0);
-                height: 60px;
-                border-radius: 10px;
-                margin-bottom: 10px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                padding: 10px;
                 cursor: pointer;
                 div.message-subject,
                 div.message-snippet {
@@ -62,7 +62,6 @@ section {
                     }
                 }
                 div.message-subject {
-                    padding: 10px 10px 0;
                     overflow: hidden;
                     display: flex;
                     p {
@@ -76,13 +75,13 @@ section {
                         text-align: right;
                         font-size: 12px;
                         i {
-                            color: red;
+                            color: #FF5454;
                             margin-right: 5px;
+                            cursor: pointer;
                         }
                     }
                 }
                 div.message-snippet {
-                    padding: 0 10px 10px;
                     overflow: hidden;
                     p {
                         line-height: 24px;
@@ -94,7 +93,7 @@ section {
                 background: rgba(0, 0, 0, 0.2);
             }
             div.message-summary.active {
-                border: 1px solid rgba(255, 255, 255, .2);
+                border: 1px solid rgba(255, 255, 255, .5);
                 cursor: default;
                 div.message-subject {
                     p {
@@ -105,12 +104,15 @@ section {
         }
         div.message-documents {
             flex: 1;
-            padding: 10px 20px 20px;
+            padding: 20px;
             border-bottom-right-radius: 10px;
             overflow-y: auto;
             background: rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
             div.message-document {
                 display: flex;
+                padding: 10px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
                 div.message-date {
                     text-align: right;
                     width: 100%;
@@ -119,27 +121,45 @@ section {
                 div.message-content {
                     flex: 1;
                     font-size: 12px;
-                    max-width: 70px;
                     p {
                         margin: 0;
                     }
                 }
                 div.message-job {
                     font-size: 12px;
-                    flex: 1;
-                    p {
-                        margin: 0;
+                    i {
+                        color: #FF5454;
+                        text-align: right;
                     }
                 }
             }
-            div.message-text {
-                border-top: 1px solid rgba(255, 255, 255, .2);
-                margin-top: 10px;
-                padding-top: 10px;
-                p {
-                    font-size: 12px;
+            div.message-document.message-document-text {
+                display: block;
+            }
+            div.message-document-line {
+                flex-direction: column;
+                div.message-line {
+                    display: flex;
+                    div.message-content {
+                        width: 70px;
+                        flex: unset;
+                    }
+                    div.message-job {
+                        flex: 1;
+                    }
                 }
+            }
+            div.message-document:last-child {
+                border: none;
             }
         }
     }
+}
+
+.done {
+    color: #999;
+}
+
+.fa-flag {
+    cursor: pointer;
 }

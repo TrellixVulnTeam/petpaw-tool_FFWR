@@ -47,11 +47,10 @@ section {
             padding: 20px;
             background: rgba(0, 0, 0, 0.2);
             border-bottom-left-radius: 10px;
+            overflow-y: auto;
             div.message-summary {
-                border: 1px solid rgba(255, 255, 255, 0);
-                height: 60px;
-                border-radius: 10px;
-                margin-bottom: 10px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                padding: 10px;
                 cursor: pointer;
                 div.message-subject,
                 div.message-snippet {
@@ -62,7 +61,6 @@ section {
                     }
                 }
                 div.message-subject {
-                    padding: 10px 10px 0;
                     overflow: hidden;
                     display: flex;
                     p {
@@ -71,7 +69,6 @@ section {
                     }
                     p:last-child {
                         text-align: right;
-                        font-size: 12px;
                         i {
                             color: red;
                             margin-right: 5px;
@@ -79,12 +76,7 @@ section {
                     }
                 }
                 div.message-snippet {
-                    padding: 0 10px 10px;
                     overflow: hidden;
-                    p {
-                        line-height: 24px;
-                        font-size: 12px;
-                    }
                     p.dispensed {
                         color: #00A900;
                     }
@@ -100,7 +92,7 @@ section {
                 background: rgba(0, 0, 0, 0.2);
             }
             div.message-summary.active {
-                border: 1px solid rgba(255, 255, 255, .2);
+                border: 1px solid rgba(255, 255, 255, .5);
                 cursor: default;
                 div.message-subject {
                     p {
@@ -108,17 +100,51 @@ section {
                     }
                 }
             }
+            div.message-summary:last-child {
+                border: none;
+            }
         }
         div.message-documents {
+            overflow-y: auto;
             flex: 1;
             padding: 10px 20px 20px;
             border-bottom-right-radius: 10px;
             overflow-y: auto;
             background: rgba(0, 0, 0, 0.1);
             div.message-document {
-                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
                 display: flex;
-                padding: 10px 0;
+                padding: 10px;
+                div.message-state:first-child {
+                    flex: 1;
+                }
+                div.message-state:last-child {
+                    text-align: right;
+                    color: #FF5454;
+                    cursor: pointer;
+                }
+                div.message-options-text {
+                    p {
+                        margin: 0;
+                    }
+                }
+                div.message-options {
+                    flex: 1;
+                    text-align: right;
+                    a {
+                        margin-left: 15px;
+                    }
+                    a:first-child {
+                        color: #ffbf00;
+                        font-weight: 400;
+                        text-transform: uppercase;
+                    }
+                    a:last-child {
+                        color: #00A900;
+                        font-weight: 400;
+                        text-transform: uppercase;
+                    }
+                }
                 div.message-content {
                     flex: 1;
                     p {
@@ -133,6 +159,17 @@ section {
                         margin: 0;
                     }
                 }
+            }
+            div.message-document:first-child,
+            div.message-document:nth-child(2),
+            div.message-document:nth-child(3) {
+                border: none;
+            }
+            div.message-document:nth-child(4) {
+                padding-bottom: 30px;
+            }
+            div.message-document:last-child {
+                border: none;
             }
         }
     }
